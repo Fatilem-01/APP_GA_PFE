@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backinsc"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="pageconnecter"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:padding="10dp"
+                app:tint="@color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Student"
+                android:textColor="@color/black"
+                android:textSize="22sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="170dp"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="352dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Entrer Votre Nom&amp;Prenom"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:hintTextColor="#454141"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/NP"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/baseline_person_24"
+                    android:drawablePadding="5dp"
+                    android:inputType="text"
+                    app:drawableTint="@color/button_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="352dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Code Appogee"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:hintTextColor="#454141"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/CA"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/baseline_key_24"
+                    android:drawablePadding="5dp"
+                    android:inputType="text"
+                    app:drawableTint="@color/button_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/filiereSpinner"
+                android:layout_width="352dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/button_color"
+                />
+
+            <RadioGroup
+                android:id="@+id/scheduleRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/s1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S1"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/s2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S2"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginStart="20dp" />
+
+                <RadioButton
+                    android:id="@+id/s3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S3"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginStart="20dp" />
+
+                <RadioButton
+                    android:id="@+id/s4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S4"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginStart="20dp" />
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="137dp"
+                tools:context=".MainActivity">
+
+                <!-- Votre mise en page existante -->
+
+                <!-- Ajout du switch pour activer/désactiver Face ID -->
+                <Switch
+                    android:id="@+id/faceIdSwitch"
+                    android:layout_width="207dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:minHeight="48dp"
+                    android:text="Face ID"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:thumbTint="@color/app_color"
+                    android:trackTint="@color/button_color"
+              />
+
+                <!-- Ajout du switch pour activer/désactiver Fingerprint -->
+                <Switch
+                    android:id="@+id/fingerprintSwitch"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/faceIdSwitch"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:minWidth="120dp"
+                    android:minHeight="48dp"
+                    android:text="Fingerprint"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:thumbTint="@color/app_color"
+                    android:trackTint="@color/button_color" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/con"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/button_color"
+            android:padding="10dp"
+            android:text="Connecter"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
